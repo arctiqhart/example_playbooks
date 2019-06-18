@@ -9,4 +9,4 @@
     AWS_SECRET_ACCESS_KEY: "{{ lookup('env','AWS_SECRET_KEY') }}"
     AWS_DEFAULT_REGION: "us-east-1"
   tasks:
-  debug: msg="{{ ansible_play_hosts }}"
+    - debug: msg="{{ ansible_play_hosts }}"
