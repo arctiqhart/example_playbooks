@@ -1,0 +1,12 @@
+---
+- name: Output Packet Dynamic Inventory
+  hosts: "{{ tower_user_name }}"
+  gather_facts: no
+  vars:
+    ansible_user: root
+  environment:
+    AWS_ACCESS_KEY_ID: "{{ lookup('env','AWS_ACCESS_KEY') }}"
+    AWS_SECRET_ACCESS_KEY: "{{ lookup('env','AWS_SECRET_KEY') }}"
+    AWS_DEFAULT_REGION: "us-east-1"
+  tasks:
+  debug: msg="{{ ansible_play_hosts }}"
