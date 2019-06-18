@@ -1,6 +1,6 @@
 ---
 - name: Output Packet Dynamic Inventory
-  hosts: "{{ tower_user_name }}"
+  hosts: arctiqhart
   gather_facts: no
   vars:
     ansible_user: root
