@@ -1,6 +1,6 @@
 ---
 - name: Output Packet Dynamic Inventory
-  hosts: localhost
+  hosts: "{{ tower_user_name }}"
   gather_facts: no
   vars:
     ansible_user: root
@@ -10,3 +10,4 @@
     AWS_DEFAULT_REGION: "us-east-1"
   tasks:
     - debug: msg="{{ ansible_play_hosts }}"
+      delegate_to: localhost
